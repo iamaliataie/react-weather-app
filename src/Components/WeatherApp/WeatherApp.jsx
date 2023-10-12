@@ -21,7 +21,6 @@ const WeatherApp = () => {
     const wind = document.getElementById('wind')
 
     const searchButton = async ()=> {
-        console.log(input);
         if (input.value === '') return
 
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${api_key}`
