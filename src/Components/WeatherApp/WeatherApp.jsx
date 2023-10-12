@@ -49,7 +49,7 @@ const WeatherApp = () => {
 
 
   return (
-    <div className='bg-blue-500 py-16'>
+    <div className='bg-blue-500 py-6'>
         <div className="flex items-center justify-between w-[350px] mx-auto space-x-2">
             <input type="text"
             className="flex-1 p-1 py-2 rounded-md text-lg outline-none"
@@ -59,9 +59,9 @@ const WeatherApp = () => {
         <div className="flex justify-center">
             <img src={wIcon} alt="" />
         </div>
-        {/*<div className="weather-temp" id='temp'>24c</div>
-        <div className="weather-location" id='city'>London</div>
-        <div className="data-container">
+        <div className="text-9xl text-white" id='temp'>24c</div>
+        <div className="text-6xl text-white" id='city'>London</div>
+        <div className="flex items-center justify-between text-white w-[360px] mx-auto mt-8">
             <div className="element">
                 <img src={humidity_icon} alt="" className="icon" />
                 <div className="data">
@@ -76,7 +76,7 @@ const WeatherApp = () => {
                     <div className="text">Wind speed</div>
                 </div>
             </div>
-        </div> */}
+        </div>
     </div>
   )
 }
