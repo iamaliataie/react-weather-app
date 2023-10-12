@@ -4,11 +4,11 @@ import './WeatherApp.css'
 import clear from '../Assets/clear.png'
 import cloud from '../Assets/cloud.png'
 import drizzle from '../Assets/drizzle.png'
-import humidity from '../Assets/humidity.png'
-import rain from '../Assets/rain.png'
+import humidity_icon from '../Assets/humidity.png'
+import rain_icon from '../Assets/rain.png'
 import search from '../Assets/search.png'
-import snow from '../Assets/snow.png'
-import wind from '../Assets/wind.png'
+import snow_icon from '../Assets/snow.png'
+import wind_icon from '../Assets/wind.png'
 
 const WeatherApp = () => {
 
@@ -48,14 +48,14 @@ const WeatherApp = () => {
         <div className="weather-location" id='city'>London</div>
         <div className="data-container">
             <div className="element">
-                <img src={humidity} alt="" className="icon" />
+                <img src={humidity_icon} alt="" className="icon" />
                 <div className="data">
                     <div className="humidity-percent" id='humidity'>64%</div>
                     <div className="text">Humidity</div>
                 </div>
             </div>
             <div className="element">
-                <img src={wind} alt="" className="icon" />
+                <img src={wind_icon} alt="" className="icon" />
                 <div className="data">
                     <div className="humidity-percent" id='wind'>18 km/h</div>
                     <div className="text">Wind speed</div>
