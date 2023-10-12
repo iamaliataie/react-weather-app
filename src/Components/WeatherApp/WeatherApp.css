@@ -53,3 +53,10 @@
     font-size: 60px;
     font-weight: 400;
 }
+
+.data-container {
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
