@@ -56,10 +56,10 @@ const WeatherApp = () => {
             placeholder='search city' id='search'/>
             <img src={search} alt="" className='bg-white p-3 rounded-md' onClick={()=>searchButton()}/>
         </div>
-        {/* <div className="weather-image">
+        <div className="flex justify-center">
             <img src={wIcon} alt="" />
         </div>
-        <div className="weather-temp" id='temp'>24c</div>
+        {/*<div className="weather-temp" id='temp'>24c</div>
         <div className="weather-location" id='city'>London</div>
         <div className="data-container">
             <div className="element">
