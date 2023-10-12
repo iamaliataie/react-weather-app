@@ -49,12 +49,14 @@ const WeatherApp = () => {
 
 
   return (
-    <div className='container'>
-        <div className="topbar">
-            <input type="text" placeholder='search city' id='search'/>
-            <img src={search} alt="" className='search-icon' onClick={()=>searchButton()}/>
+    <div className='bg-blue-500 py-16'>
+        <div className="flex items-center justify-between w-[350px] mx-auto space-x-2">
+            <input type="text"
+            className="flex-1 p-1 py-2 rounded-md text-lg outline-none"
+            placeholder='search city' id='search'/>
+            <img src={search} alt="" className='bg-white p-3 rounded-md' onClick={()=>searchButton()}/>
         </div>
-        <div className="weather-image">
+        {/* <div className="weather-image">
             <img src={wIcon} alt="" />
         </div>
         <div className="weather-temp" id='temp'>24c</div>
@@ -74,7 +76,7 @@ const WeatherApp = () => {
                     <div className="text">Wind speed</div>
                 </div>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }
