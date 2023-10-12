@@ -49,7 +49,7 @@ const WeatherApp = () => {
 
 
   return (
-    <div className='bg-blue-500 py-6'>
+    <div className='bg-blue-500 py-6 h-screen'>
         <div className="flex items-center justify-between w-[350px] mx-auto space-x-2">
             <input type="text"
             className="flex-1 p-1 py-2 rounded-md text-lg outline-none"
@@ -57,7 +57,7 @@ const WeatherApp = () => {
             <img src={search} alt="" className='bg-white p-3 rounded-md' onClick={()=>searchButton()}/>
         </div>
         <div className="flex justify-center">
-            <img src={wIcon} alt="" />
+            <img src={wIcon} alt="" className='w-40'/>
         </div>
         <div className="text-8xl text-white" id='temp'>24&deg;c</div>
         <div className="text-6xl text-white" id='city'>London</div>
