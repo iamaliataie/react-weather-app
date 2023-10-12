@@ -11,6 +11,9 @@ import snow from '../Assets/snow.png'
 import wind from '../Assets/wind.png'
 
 const WeatherApp = () => {
+
+    const api_key = 'dc51408f4d141a51ba856de26b7551d6'
+
   return (
     <div className='container'>
         <div className="topbar">
