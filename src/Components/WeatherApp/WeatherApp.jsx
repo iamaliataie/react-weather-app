@@ -31,7 +31,7 @@ const WeatherApp = () => {
         const humidity = document.getElementById('humidity')
         const wind = document.getElementById('wind')
         
-        temp.innerHTML = data.main.temp
+        temp.innerHTML = data.main.temp + '&deg;c'
         city.innerHTML = data.name
         humidity.innerHTML = data.main.humidity + '%'
         wind.innerHTML = data.wind.speed + ' ' + 'km/h'
@@ -59,7 +59,7 @@ const WeatherApp = () => {
         <div className="flex justify-center">
             <img src={wIcon} alt="" />
         </div>
-        <div className="text-9xl text-white" id='temp'>24c</div>
+        <div className="text-8xl text-white" id='temp'>24&deg;c</div>
         <div className="text-6xl text-white" id='city'>London</div>
         <div className="flex items-center justify-between text-white w-[360px] mx-auto px-4 mt-8">
             <div className="flex items-center justify-start space-x-2">
