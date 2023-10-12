@@ -14,11 +14,19 @@ const WeatherApp = () => {
 
     const api_key = 'dc51408f4d141a51ba856de26b7551d6'
 
+    const input = document.getElementById('search')
+
+    const searchButton = ()=> {
+        console.log(input.value);
+    }
+
+    // url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`
+
   return (
     <div className='container'>
         <div className="topbar">
-            <input type="text" placeholder='search city'/>
-            <img src={search} alt="" className='search-icon'/>
+            <input type="text" placeholder='search city' id='search'/>
+            <img src={search} alt="" className='search-icon' onClick={()=>searchButton()}/>
         </div>
         <div className="weather-image">
             <img src={cloud} alt="" />
