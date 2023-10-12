@@ -14,7 +14,7 @@ const WeatherApp = () => {
 
     const api_key = 'dc51408f4d141a51ba856de26b7551d6'
 
-    const [wIcon, setWeatherIcon] = useState()
+    const [wIcon, setWeatherIcon] = useState(clear_icon)
     
     const searchButton = async ()=> {
         const input = document.getElementById('search')
