@@ -1,9 +1,9 @@
-import React from 'react'
+import { React, useState} from 'react'
 import './WeatherApp.css'
 
-import clear from '../Assets/clear.png'
-import cloud from '../Assets/cloud.png'
-import drizzle from '../Assets/drizzle.png'
+import clear_icon from '../Assets/clear.png'
+import cloud_icon from '../Assets/cloud.png'
+import drizzle_icon from '../Assets/drizzle.png'
 import humidity_icon from '../Assets/humidity.png'
 import rain_icon from '../Assets/rain.png'
 import search from '../Assets/search.png'
@@ -14,6 +14,7 @@ const WeatherApp = () => {
 
     const api_key = 'dc51408f4d141a51ba856de26b7551d6'
 
+    const [wIcon, setWeatherIcon] = useState()
     
     const searchButton = async ()=> {
         const input = document.getElementById('search')
@@ -22,6 +23,8 @@ const WeatherApp = () => {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${api_key}`
         
         const data = await (await fetch(url)).json()
+
+        console.log(data);
 
         const temp = document.getElementById('temp')
         const city = document.getElementById('city')
@@ -32,6 +35,16 @@ const WeatherApp = () => {
         city.innerHTML = data.name
         humidity.innerHTML = data.main.humidity + '%'
         wind.innerHTML = data.wind.speed + ' ' + 'km/h'
+
+        if (data.weather[0].icon === '01d' || data.weather[0].icon === '01n'){setWeatherIcon(clear_icon)}
+        else if (data.weather[0].icon === '02d' || data.weather[0].icon === '02n'){setWeatherIcon(cloud_icon)}
+        else if (data.weather[0].icon === '03d' || data.weather[0].icon === '03n'){setWeatherIcon(drizzle_icon)}
+        else if (data.weather[0].icon === '04d' || data.weather[0].icon === '04n'){setWeatherIcon(drizzle_icon)}
+        else if (data.weather[0].icon === '09d' || data.weather[0].icon === '09n'){setWeatherIcon(rain_icon)}
+        else if (data.weather[0].icon === '10d' || data.weather[0].icon === '10n'){setWeatherIcon(rain_icon)}
+        else if (data.weather[0].icon === '13d' || data.weather[0].icon === '13n'){setWeatherIcon(snow_icon)}
+        else setWeatherIcon(clear_icon)
+
     }
 
 
@@ -42,7 +55,7 @@ const WeatherApp = () => {
             <img src={search} alt="" className='search-icon' onClick={()=>searchButton()}/>
         </div>
         <div className="weather-image">
-            <img src={cloud} alt="" />
+            <img src={wIcon} alt="" />
         </div>
         <div className="weather-temp" id='temp'>24c</div>
         <div className="weather-location" id='city'>London</div>
