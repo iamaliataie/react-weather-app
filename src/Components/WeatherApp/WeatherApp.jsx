@@ -14,18 +14,19 @@ const WeatherApp = () => {
 
     const api_key = 'dc51408f4d141a51ba856de26b7551d6'
 
-    const input = document.getElementById('search')
-    const temp = document.getElementById('temp')
-    const city = document.getElementById('city')
-    const humidity = document.getElementById('humidity')
-    const wind = document.getElementById('wind')
-
+    
     const searchButton = async ()=> {
-        if (input.value === '') return
-
+        const input = document.getElementById('search')
+        if (input === '') return 0;
+        
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${api_key}`
-
+        
         const data = await (await fetch(url)).json()
+
+        const temp = document.getElementById('temp')
+        const city = document.getElementById('city')
+        const humidity = document.getElementById('humidity')
+        const wind = document.getElementById('wind')
         
         temp.innerHTML = data.main.temp
         city.innerHTML = data.name
