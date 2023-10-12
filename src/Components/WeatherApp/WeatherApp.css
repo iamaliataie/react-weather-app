@@ -17,7 +17,7 @@
     margin: 0 auto;
 } */
 
-.topbar input {
+/* .topbar input {
     padding: 20px 10px;
     border-radius: 10px;
     border: none;
@@ -66,7 +66,7 @@
     display: flex;
     align-items: flex-start;
     gap: 12px;
-}
+} */
 
 .data {
     font-size: 34px;
@@ -77,7 +77,7 @@
     font-size: 20px;
     font-weight: 400;
 }
-
+/* 
 .icon {
     margin-top: 10px;   
-}
+} */

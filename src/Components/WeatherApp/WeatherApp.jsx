@@ -61,19 +61,19 @@ const WeatherApp = () => {
         </div>
         <div className="text-9xl text-white" id='temp'>24c</div>
         <div className="text-6xl text-white" id='city'>London</div>
-        <div className="flex items-center justify-between text-white w-[360px] mx-auto mt-8">
-            <div className="element">
+        <div className="flex items-center justify-between text-white w-[360px] mx-auto px-4 mt-8">
+            <div className="flex items-center justify-start space-x-2">
                 <img src={humidity_icon} alt="" className="icon" />
-                <div className="data">
-                    <div className="humidity-percent" id='humidity'>64%</div>
-                    <div className="text">Humidity</div>
+                <div className="">
+                    <div className="text-[30px]" id='humidity'>64%</div>
+                    <div className="text-[20px]">Humidity</div>
                 </div>
             </div>
-            <div className="element">
+            <div className="flex items-center justify-start space-x-2">
                 <img src={wind_icon} alt="" className="icon" />
-                <div className="data">
-                    <div className="humidity-percent" id='wind'>18 km/h</div>
-                    <div className="text">Wind speed</div>
+                <div className="">
+                    <div className="text-[30px]" id='wind'>18 km/h</div>
+                    <div className="text-[20px]">Wind speed</div>
                 </div>
             </div>
         </div>
