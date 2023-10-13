@@ -1,5 +1,4 @@
 import { React, useState} from 'react'
-import './WeatherApp.css'
 
 import clear_icon from '../Assets/clear.png'
 import cloud_icon from '../Assets/cloud.png'
