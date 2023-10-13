@@ -60,10 +60,3 @@
     display: flex;
     justify-content: center;
 }
-
-.element {
-    margin: auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-} */
