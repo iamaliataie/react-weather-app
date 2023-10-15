@@ -29,7 +29,6 @@ const WeatherApp = () => {
 
         console.log(data);
 
-        const city = document.getElementById('city')
         const humidity = document.getElementById('humidity')
         const wind = document.getElementById('wind')
         
