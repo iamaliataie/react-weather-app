@@ -35,7 +35,7 @@ const WeatherApp = () => {
         const wind = document.getElementById('wind')
         
         setTemp(data.main.temp)
-        city.innerHTML = data.name
+        setCity(data.name)
         humidity.innerHTML = data.main.humidity + '%'
         wind.innerHTML = data.wind.speed + ' ' + 'km/h'
 
