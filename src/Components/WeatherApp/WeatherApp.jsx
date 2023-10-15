@@ -17,7 +17,8 @@ const WeatherApp = () => {
     const [temp, setTemp] = useState('25')
     const [city, setCity] = useState('Kabul')
     const [humidity, setHumidity] = useState('50')
-    
+    const [wind, setWind] = useState('21')
+
     const searchButton = async ()=> {
         const input = document.getElementById('search')
         if (input === '') return 0;
@@ -74,7 +75,7 @@ const WeatherApp = () => {
             <div className="flex items-center justify-start space-x-2">
                 <img src={wind_icon} alt="" className="icon" />
                 <div className="">
-                    <div className="text-[30px]" id='wind'>18 km/h</div>
+                    <div className="text-[30px]" id='wind'>{wind} km/h</div>
                     <div className="text-[20px]">Wind speed</div>
                 </div>
             </div>
