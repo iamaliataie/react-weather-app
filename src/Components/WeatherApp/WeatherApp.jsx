@@ -27,9 +27,6 @@ const WeatherApp = () => {
         
         const data = await (await fetch(url)).json()
 
-        console.log(data);
-
-        
         setTemp(data.main.temp)
         setCity(data.name)
         setHumidity(data.main.humidity)
