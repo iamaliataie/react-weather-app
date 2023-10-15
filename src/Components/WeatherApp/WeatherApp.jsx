@@ -37,7 +37,7 @@ const WeatherApp = () => {
         setTemp(data.main.temp)
         setCity(data.name)
         setHumidity(data.main.humidity)
-        wind.innerHTML = data.wind.speed + ' ' + 'km/h'
+        setWind(data.wind.speed)
 
         if (data.weather[0].icon === '01d' || data.weather[0].icon === '01n'){setWeatherIcon(clear_icon)}
         else if (data.weather[0].icon === '02d' || data.weather[0].icon === '02n'){setWeatherIcon(cloud_icon)}
