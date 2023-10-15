@@ -29,7 +29,6 @@ const WeatherApp = () => {
 
         console.log(data);
 
-        const wind = document.getElementById('wind')
         
         setTemp(data.main.temp)
         setCity(data.name)
