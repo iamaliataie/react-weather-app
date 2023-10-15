@@ -29,7 +29,6 @@ const WeatherApp = () => {
 
         console.log(data);
 
-        const humidity = document.getElementById('humidity')
         const wind = document.getElementById('wind')
         
         setTemp(data.main.temp)
