@@ -16,6 +16,7 @@ const WeatherApp = () => {
     const [wIcon, setWeatherIcon] = useState(clear_icon)
     const [temp, setTemp] = useState('25')
     const [city, setCity] = useState('Kabul')
+    const [humidity, setHumidity] = useState('50')
     
     const searchButton = async ()=> {
         const input = document.getElementById('search')
@@ -66,7 +67,7 @@ const WeatherApp = () => {
             <div className="flex items-center justify-start space-x-2">
                 <img src={humidity_icon} alt="" className="icon" />
                 <div className="">
-                    <div className="text-[30px]" id='humidity'>64%</div>
+                    <div className="text-[30px]" id='humidity'>{humidity}%</div>
                     <div className="text-[20px]">Humidity</div>
                 </div>
             </div>
