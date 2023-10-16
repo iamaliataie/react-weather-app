@@ -22,12 +22,11 @@ const WeatherApp = () => {
     const searchButton = async ()=> {
         const input = document.getElementById('search')
         if (input === '') return 0;
-        
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${api_key}`
         
         const data = await (await fetch(url)).json()
         if (data.cod === '404'){
-            console.log(data.message);
+            alert(data.message);
             return 0;
         }
 
@@ -44,7 +43,6 @@ const WeatherApp = () => {
         else if (data.weather[0].icon === '10d' || data.weather[0].icon === '10n'){setWeatherIcon(rain_icon)}
         else if (data.weather[0].icon === '13d' || data.weather[0].icon === '13n'){setWeatherIcon(snow_icon)}
         else setWeatherIcon(clear_icon)
-
     }
 
 
