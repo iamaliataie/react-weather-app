@@ -26,6 +26,10 @@ const WeatherApp = () => {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${api_key}`
         
         const data = await (await fetch(url)).json()
+        if (data.cod === '404'){
+            console.log(data.message);
+            return 0;
+        }
 
         setTemp(data.main.temp)
         setCity(data.name)
