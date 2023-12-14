@@ -1,5 +1,4 @@
 import { React, useState} from 'react'
-
 import clear_icon from '../Assets/clear.png'
 import cloud_icon from '../Assets/cloud.png'
 import drizzle_icon from '../Assets/drizzle.png'
