@@ -20,6 +20,7 @@ const WeatherApp = () => {
     const [wind, setWind] = useState('21')
 
     const searchButton = async ()=> {
+        
         const input = document.getElementById('search')
         if (input === '') return 0;
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${api_key}`
